@@ -1,0 +1,38 @@
+{
+  "name": "openfox-pareto-line",
+  "version": "1.0.0",
+  "description": "Visualize model intelligence vs cost per task and Pareto efficiency frontier from Artificial Analysis in OpenFox.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "openfox": {
+    "apiVersion": 2,
+    "displayName": "Pareto Line",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"6\" cy=\"18\" r=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/><circle cx=\"19\" cy=\"7\" r=\"2\"/><path d=\"M6 18c3-4 7-6 13-11\" stroke-dasharray=\"2 2\"/></svg>",
+    "description": "Intelligence Index vs Cost Pareto line comparison based on Artificial Analysis for available OpenFox models.",
+    "entry": "./dist/index.js",
+    "capabilities": [
+      "ui",
+      "rpc",
+      "settings",
+      "tools"
+    ],
+    "timeoutMs": 20000
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  },
+  "license": "MIT"
+}
